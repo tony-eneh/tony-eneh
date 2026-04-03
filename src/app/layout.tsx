@@ -1,35 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
+  weight: ["600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tony-eneh.vercel.app"),
-  title: "Tony Eneh | Senior Full-Stack Engineer & Researcher",
+  title: "Anthony Uchenna Eneh | Senior Full-Stack Engineer • PhD Researcher",
   description:
-    "Portfolio of Tony Eneh — frontend-focused senior full-stack engineer, founder, and applied systems researcher building modern web, blockchain, and research-grade products.",
+    "Personal portfolio of Anthony Uchenna Eneh — senior full-stack engineer, founder, and PhD researcher building web, mobile, blockchain, and AI systems from South Korea.",
   openGraph: {
-    title: "Tony Eneh | Senior Full-Stack Engineer & Researcher",
+    title: "Anthony Uchenna Eneh | Senior Full-Stack Engineer • PhD Researcher",
     description:
-      "Frontend-focused senior full-stack engineer and applied systems researcher building modern web, blockchain, and verifiable systems.",
+      "A personal portfolio blending engineering depth, research work, and selected product builds.",
     url: "https://tony-eneh.vercel.app",
-    siteName: "Tony Eneh",
+    siteName: "Anthony Uchenna Eneh",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tony Eneh | Senior Full-Stack Engineer & Researcher",
+    title: "Anthony Uchenna Eneh | Senior Full-Stack Engineer • PhD Researcher",
     description:
-      "Frontend-focused senior full-stack engineer and applied systems researcher building modern web, blockchain, and verifiable systems.",
+      "Senior full-stack engineer and PhD researcher building thoughtful products and trustworthy systems.",
   },
 };
 
@@ -41,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
+      className={`${inter.variable} ${playfair.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-[#020617] font-sans text-white">{children}</body>
+      <body className="min-h-full bg-[#08111f] font-sans text-[#f7f2e8]">{children}</body>
     </html>
   );
 }
