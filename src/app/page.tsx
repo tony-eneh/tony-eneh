@@ -504,6 +504,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="border-t border-white/10 bg-[#08111f]">
+        <div className="mx-auto max-w-7xl px-4 py-8 text-center text-sm text-[#d8ccb7] sm:px-6 lg:px-8">
+          Built by{" "}
+          <a
+            href="https://www.joypinness.com"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold text-amber-300 transition hover:text-amber-200"
+          >
+            Joypinness Technologies
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
