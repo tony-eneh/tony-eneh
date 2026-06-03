@@ -128,11 +128,11 @@ const stack = [
 ];
 
 const contactLinks = [
-  {
-    label: "Email",
-    value: "anthony.u.eneh@gmail.com",
-    href: "mailto:anthony.u.eneh@gmail.com",
-  },
+  // {
+  //   label: "Email",
+  //   value: "anthony.u.eneh@gmail.com",
+  //   href: "mailto:anthony.u.eneh@gmail.com",
+  // },
   {
     label: "GitHub",
     value: "tony-eneh",
