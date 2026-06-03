@@ -143,11 +143,11 @@ const contactLinks = [
     value: "linkedin.com/in/tony-eneh",
     href: "https://linkedin.com/in/tony-eneh",
   },
-  {
-    label: "WhatsApp",
-    value: "Chat on WhatsApp",
-    href: "https://wa.me/821028619815",
-  },
+  // {
+  //   label: "WhatsApp",
+  //   value: "Chat on WhatsApp",
+  //   href: "https://wa.me/821028619815",
+  // },
 ];
 
 function SectionIntro({
