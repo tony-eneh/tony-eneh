@@ -373,7 +373,7 @@ export default function Home() {
                         key={link.href}
                         href={link.href}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold transition hover:-translate-y-0.5 ${
                           index === 0 ? "bg-white text-slate-950" : "bg-slate-950 text-white"
                         }`}
@@ -404,7 +404,7 @@ export default function Home() {
                 key={item.title}
                 href={item.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="group flex gap-5 p-6 transition hover:bg-slate-50"
               >
                 <div className="mt-1 h-3 w-3 shrink-0 rounded-full bg-sky-500" />
@@ -491,7 +491,7 @@ export default function Home() {
                   key={item.label}
                   href={item.href}
                   target={item.href.startsWith("mailto:") ? undefined : "_blank"}
-                  rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                  rel={item.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                   className="rounded-3xl border border-white/10 bg-white/[0.06] p-5 transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-white/[0.1]"
                 >
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">{item.label}</p>
@@ -517,7 +517,7 @@ export default function Home() {
         <a
           href="https://www.joypinness.com"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="font-semibold text-slate-950 transition hover:text-sky-700"
         >
           Joypinness Technologies

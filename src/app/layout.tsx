@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth antialiased">
-      <body className="min-h-full bg-[#f8fafc] text-slate-950">{children}</body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }
