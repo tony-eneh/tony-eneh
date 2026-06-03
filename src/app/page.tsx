@@ -6,21 +6,21 @@ const experience = [
     company: "Joypinness Technologies Ltd",
     period: "2017 — Present",
     summary:
-      "Leading product strategy, design, and engineering across client systems, internal products, startup experiments, and research-driven prototypes.",
+      "Leads product strategy, design, and engineering across client systems, internal products, startup experiments, and research-driven prototypes.",
   },
   {
     role: "Frontend Engineer",
     company: "Africhange",
     period: "2022 — 2025",
     summary:
-      "Built payments and compliance dashboards, scalable frontend architecture, reusable UI systems, and cloud-friendly delivery pipelines for a regulated fintech environment.",
+      "Built payments and compliance dashboards, scalable frontend architecture, reusable UI systems, and cloud-friendly delivery pipelines for regulated fintech.",
   },
   {
     role: "Frontend Engineer",
     company: "Evolutics Tech",
     period: "2021 — 2022",
     summary:
-      "Worked on modular B2B insurance software with role-based workflows, configurable dashboards, and customer-specific feature access.",
+      "Delivered modular B2B insurance software with role-based workflows, configurable dashboards, and customer-specific feature access.",
   },
   {
     role: "Full-Stack Developer",
@@ -42,35 +42,35 @@ const projects = [
   {
     name: "BookieAI",
     description:
-      "An AI-assisted betting intelligence concept focused on explainable sports insights, user-facing clarity, and productized prediction workflows.",
+      "AI-assisted betting intelligence focused on explainable sports insights and productized prediction workflows.",
     stack: ["AI workflows", "Product strategy", "Frontend systems"],
     links: [{ label: "GitHub", href: "https://github.com/tony-eneh/bookie-ai" }],
   },
   {
     name: "OgaPredict",
     description:
-      "A subscription-based sports prediction platform with payment flows, rule-based prediction logic, and room for ML-assisted explainability.",
+      "Subscription sports prediction platform with payment flows, rule-based logic, and ML-ready explainability.",
     stack: ["Next.js", "Node.js", "Payments"],
     links: [],
   },
   {
     name: "FieldSnap",
     description:
-      "A field operations product pairing a modern admin dashboard with mobile execution, offline sync, and workforce visibility.",
+      "Field operations product pairing a modern admin dashboard with mobile execution, offline sync, and workforce visibility.",
     stack: ["Next.js", "Flutter", "Firebase"],
     links: [{ label: "Web", href: "https://field-snap.vercel.app" }],
   },
   {
     name: "PayPilot",
     description:
-      "A fintech demo with onboarding, KYC-ready flows, wallet operations, audit trails, and administrative controls.",
+      "Fintech demo with onboarding, KYC-ready flows, wallet operations, audit trails, and administrative controls.",
     stack: ["Next.js", "TypeScript", "Prisma"],
     links: [{ label: "Live", href: "http://pay-pilot.netlify.app" }],
   },
   {
     name: "Cold-pitch Templates",
     description:
-      "A practical library of outreach-ready website concepts and growth assets for founders who need speed without generic design.",
+      "Outreach-ready website concepts and growth assets for founders who need speed without generic design.",
     stack: ["Templates", "Conversion design", "Rapid delivery"],
     links: [{ label: "Portfolio", href: "https://joypinness.com/portfolio" }],
   },
@@ -82,32 +82,27 @@ const publications = [
       "MetaHate: Text-based Hate Speech Detection for Metaverse Applications using Deep Learning",
     venue: "IEEE ICTC 2023",
     href: "https://www.researchgate.net/publication/374976069",
-    note: "Peer-reviewed publication on hate-speech detection for metaverse environments.",
   },
   {
     title:
       "HyBaTwin: Web-Based Hybrid Digital Twin Platform for Electric Vehicle Battery Capacity Estimation",
     venue: "JKICS 2025",
     href: "https://doi.org/10.7840/kics.2025.50.4.549",
-    note: "Peer-reviewed work combining digital twins, web systems, and predictive estimation.",
   },
   {
     title: "ClaimGuard",
     venue: "Research in progress",
     href: "https://github.com/tony-eneh/claimguard",
-    note: "Verifiable workflow evidence and access-control thinking for high-stakes insurance and claims systems.",
   },
   {
     title: "PureAjo",
     venue: "Research prototype",
     href: "https://github.com/tony-eneh/pureajo-paper",
-    note: "A blockchain-backed P2P insurance direction exploring governance, trust, and automated payouts.",
   },
   {
     title: "EdgeConsent",
     venue: "Research prototype",
     href: "https://github.com/tony-eneh/edgeconsent",
-    note: "Consent and policy enforcement concepts for distributed, privacy-sensitive systems.",
   },
 ];
 
@@ -128,11 +123,11 @@ const stack = [
 ];
 
 const contactLinks = [
-  // {
-  //   label: "Email",
-  //   value: "anthony.u.eneh@gmail.com",
-  //   href: "mailto:anthony.u.eneh@gmail.com",
-  // },
+  {
+    label: "Email",
+    value: "Start a conversation",
+    href: "mailto:anthony.u.eneh@gmail.com",
+  },
   {
     label: "GitHub",
     value: "tony-eneh",
@@ -143,380 +138,390 @@ const contactLinks = [
     value: "linkedin.com/in/tony-eneh",
     href: "https://linkedin.com/in/tony-eneh",
   },
-  // {
-  //   label: "WhatsApp",
-  //   value: "Chat on WhatsApp",
-  //   href: "https://wa.me/821028619815",
-  // },
+  {
+    label: "WhatsApp",
+    value: "Chat on WhatsApp",
+    href: "https://wa.me/821028619815",
+  },
 ];
 
-function SectionIntro({
-  label,
+function SectionHeader({
+  eyebrow,
   title,
   copy,
 }: {
-  label: string;
+  eyebrow: string;
   title: string;
   copy: string;
 }) {
   return (
-    <div className="max-w-3xl space-y-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-300/90">{label}</p>
-      <h2 className="font-serif text-4xl leading-tight text-[#fff7ec] sm:text-5xl">{title}</h2>
-      <p className="text-base leading-8 text-[#d8ccb7] sm:text-lg">{copy}</p>
+    <div className="max-w-3xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">{eyebrow}</p>
+      <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
+        {title}
+      </h2>
+      <p className="mt-5 text-lg leading-8 text-slate-600">{copy}</p>
     </div>
   );
 }
 
-function Pill({ children }: { children: React.ReactNode }) {
+function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-[#f6ead7]">
+    <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-700 shadow-sm shadow-slate-950/5">
       {children}
     </span>
   );
 }
 
+function ArrowUpRight() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
+      <path
+        d="M6 14 14 6m0 0H7m7 0v7"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
-    <main className="overflow-x-hidden bg-transparent text-[#f7f2e8]">
-      <section className="mx-auto grid min-h-screen max-w-[1600px] gap-6 px-4 py-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-6">
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b1525] min-h-[34rem] lg:min-h-[calc(100vh-3rem)]">
-          <Image
-            src="/photos/headshot.jpg"
-            alt="Anthony Uchenna Eneh smiling in front of a colorful wall"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 55vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08111f] via-[#08111f]/45 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12">
-            <div className="mb-5 flex flex-wrap gap-3 text-sm text-[#fff1dc]">
-              <span className="rounded-full border border-white/15 bg-black/20 px-4 py-2 backdrop-blur-sm">
-                South Korea 🇰🇷
-              </span>
-              <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-amber-100 backdrop-blur-sm">
-                9+ years building across product and research
-              </span>
-            </div>
-            <h1 className="max-w-4xl font-serif text-5xl leading-none text-white sm:text-6xl lg:text-7xl">
-              Anthony Uchenna Eneh
-            </h1>
-            <p className="mt-4 max-w-2xl text-lg text-[#f5dfbf] sm:text-xl">
-              Senior Full-Stack Engineer • PhD Researcher
-            </p>
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[#e1d4c0] sm:text-lg">
-              I build software with a founder’s urgency and a researcher’s discipline — spanning web,
-              mobile, blockchain, AI, and trustworthy systems for real-world use.
-            </p>
-          </div>
-        </div>
+    <main className="min-h-screen overflow-hidden text-slate-900">
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.18),transparent_32%),radial-gradient(circle_at_85%_12%,rgba(245,158,11,0.18),transparent_26%),linear-gradient(180deg,#f8fafc_0%,#eef2f7_48%,#f8fafc_100%)]" />
 
-        <div className="grid gap-6 lg:grid-rows-[auto_1fr_auto]">
-          <div className="rounded-[2rem] border border-amber-200/10 bg-[#101a2b]/90 p-8 shadow-2xl shadow-black/20">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-300">Editorial note</p>
-            <h2 className="mt-4 font-serif text-3xl text-[#fff7ec] sm:text-4xl">
-              Personal portfolio, not a corporate brochure.
-            </h2>
-            <p className="mt-5 text-base leading-8 text-[#d7c8b1]">
-              Based in South Korea, Tony combines engineering leadership, startup execution, and doctoral research at Kumoh
-              National Institute of Technology. The result is a profile shaped by both shipping and scholarship.
-            </p>
-          </div>
+      <header className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 sm:px-8">
+        <a href="#top" className="text-sm font-bold uppercase tracking-[0.25em] text-slate-950">
+          Tony Eneh
+        </a>
+        <nav className="hidden items-center gap-7 rounded-full border border-white/70 bg-white/75 px-6 py-3 text-sm font-medium text-slate-600 shadow-sm shadow-slate-950/5 backdrop-blur md:flex">
+          <a href="#work" className="transition hover:text-slate-950">Work</a>
+          <a href="#projects" className="transition hover:text-slate-950">Projects</a>
+          <a href="#research" className="transition hover:text-slate-950">Research</a>
+          <a href="#contact" className="transition hover:text-slate-950">Contact</a>
+        </nav>
+        <a
+          href="mailto:anthony.u.eneh@gmail.com"
+          className="rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-slate-800"
+        >
+          Let’s talk
+        </a>
+      </header>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-            <article className="rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-sm">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#caa96d]">Current focus</p>
-              <p className="mt-4 font-serif text-2xl text-white">Verifiable AI decision infrastructure</p>
-              <p className="mt-4 text-sm leading-7 text-[#d8ccb7]">
-                Researching trustworthy, explainable systems for regulated and high-stakes environments.
-              </p>
-            </article>
-            <article className="rounded-[2rem] border border-white/10 bg-[#160f09]/40 p-7">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#caa96d]">Builder mode</p>
-              <p className="mt-4 font-serif text-2xl text-white">Frontend-heavy, full-stack capable</p>
-              <p className="mt-4 text-sm leading-7 text-[#d8ccb7]">
-                From polished interfaces to backend APIs, product architecture, blockchain integrations, and deployment.
-              </p>
-            </article>
+      <section id="top" className="mx-auto grid max-w-7xl gap-10 px-5 pb-20 pt-10 sm:px-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:pb-28 lg:pt-16">
+        <div>
+          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-medium text-slate-600 shadow-sm shadow-slate-950/5 backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            Senior Full-Stack Engineer · PhD Researcher · South Korea
           </div>
-
-          <div className="flex flex-wrap gap-3">
+          <h1 className="max-w-5xl text-6xl font-semibold leading-[0.92] tracking-[-0.075em] text-slate-950 sm:text-7xl lg:text-8xl">
+            Designing dependable software for products that cannot feel improvised.
+          </h1>
+          <p className="mt-8 max-w-2xl text-xl leading-9 text-slate-600">
+            Anthony Uchenna Eneh combines founder-level product judgment, production engineering, and doctoral research to build polished web, mobile, AI, and blockchain systems.
+          </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href="mailto:anthony.u.eneh@gmail.com"
-              className="inline-flex items-center rounded-full bg-amber-400 px-5 py-3 text-sm font-semibold text-[#17120c] transition hover:bg-amber-300"
+              href="#projects"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-600 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-sky-600/25 transition hover:-translate-y-0.5 hover:bg-sky-500"
             >
-              Email Tony
+              View selected work <ArrowUpRight />
             </a>
             <a
-              href="https://github.com/tony-eneh"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
+              href="#research"
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-4 text-sm font-bold text-slate-900 shadow-sm shadow-slate-950/5 transition hover:-translate-y-0.5 hover:border-slate-300"
             >
-              GitHub
-            </a>
-            <a
-              href="https://wa.me/821028619815"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-amber-300/30 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/10"
-            >
-              WhatsApp
+              Explore research
             </a>
           </div>
         </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
-            <Image
-              src="/photos/about.jpg"
-              alt="Anthony Uchenna Eneh sitting outdoors on a bench"
-              width={3048}
-              height={4064}
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="h-full w-full object-cover"
-            />
+        <div className="relative">
+          <div className="absolute -left-8 top-12 hidden rounded-3xl border border-white/70 bg-white/80 p-5 shadow-2xl shadow-slate-950/10 backdrop-blur md:block">
+            <p className="text-4xl font-semibold tracking-[-0.05em] text-slate-950">9+</p>
+            <p className="mt-1 max-w-32 text-sm leading-5 text-slate-500">years shipping software</p>
           </div>
-          <div className="space-y-8">
-            <SectionIntro
-              label="About"
-              title="A personal practice at the intersection of products, research, and systems thinking"
-              copy="Tony has spent 9+ years building web products, mobile experiences, internal platforms, and blockchain-backed systems. He is currently pursuing a PhD at Kumoh National Institute of Technology in South Korea, while continuing to ship practical software across AI, fintech, and operational tooling."
-            />
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-sm uppercase tracking-[0.25em] text-amber-300">Research</p>
-                <p className="mt-3 text-base leading-7 text-[#ddcfbb]">
-                  Doctoral work in IT Convergence Engineering with a focus on trustworthy, verifiable, high-stakes decision systems.
-                </p>
-              </div>
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-sm uppercase tracking-[0.25em] text-amber-300">Builds</p>
-                <p className="mt-3 text-base leading-7 text-[#ddcfbb]">
-                  Comfortable across web, mobile, blockchain, and AI product work — with a frontend eye and full-stack execution.
-                </p>
-              </div>
+          <div className="absolute -right-5 bottom-10 z-10 hidden rounded-3xl bg-slate-950 p-5 text-white shadow-2xl shadow-slate-950/25 md:block">
+            <p className="text-sm font-medium text-slate-300">Current focus</p>
+            <p className="mt-2 max-w-56 text-lg font-semibold leading-6">Verifiable AI decision infrastructure</p>
+          </div>
+          <div className="overflow-hidden rounded-[2.25rem] border border-white/80 bg-white p-3 shadow-2xl shadow-slate-950/12">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-slate-200">
+              <Image
+                src="/photos/headshot.jpg"
+                alt="Anthony Uchenna Eneh smiling in front of a colorful wall"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-[#0c1525]/80">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
-            <SectionIntro
-              label="Experience"
-              title="A timeline shaped by startup grit and production reality"
-              copy="The through-line is simple: learn fast, ship carefully, and keep increasing the complexity of the systems you can own."
-            />
-            <div className="space-y-8">
-              {experience.map((item, index) => (
-                <article key={`${item.company}-${item.role}`} className="grid gap-4 border-l border-amber-300/25 pl-6 sm:grid-cols-[80px_1fr] sm:gap-6">
-                  <div className="text-sm font-semibold tracking-[0.28em] text-amber-300">0{index + 1}</div>
-                  <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                      <div>
-                        <h3 className="font-serif text-2xl text-white">{item.role}</h3>
-                        <p className="mt-1 text-[#f4d8a0]">{item.company}</p>
-                      </div>
-                      <p className="text-sm text-[#cdbfa7]">{item.period}</p>
-                    </div>
-                    <p className="mt-4 text-base leading-8 text-[#d8ccb7]">{item.summary}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <SectionIntro
-          label="Projects"
-          title="Selected products and experiments"
-          copy="These projects show a mix of commercial instincts, systems thinking, and curiosity-driven product building."
-        />
-        <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
-            <article
-              key={project.name}
-              className={`rounded-[2rem] border p-6 ${
-                index % 3 === 0
-                  ? "border-amber-300/20 bg-[#17120d]"
-                  : index % 3 === 1
-                    ? "border-white/10 bg-white/5"
-                    : "border-white/10 bg-[#0f1728]"
-              }`}
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">{project.name}</p>
-              <p className="mt-4 font-serif text-3xl text-white">{project.description}</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.stack.map((item) => (
-                  <Pill key={item}>{item}</Pill>
-                ))}
-              </div>
-              {project.links.length > 0 ? (
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {project.links.map((link) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/5"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              ) : (
-                <p className="mt-8 text-sm text-[#baa98e]">Available on request</p>
-              )}
+      <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
+        <div className="grid gap-4 rounded-[2rem] border border-slate-200 bg-white/80 p-4 shadow-xl shadow-slate-950/5 backdrop-blur sm:grid-cols-3">
+          {[
+            ["01", "Product judgment", "Founder-led execution from idea to launch."],
+            ["02", "Interface craft", "Clear, accessible, conversion-aware UI systems."],
+            ["03", "Research depth", "Trustworthy systems for regulated decisions."],
+          ].map(([number, title, copy]) => (
+            <article key={title} className="rounded-[1.5rem] bg-slate-50 p-6">
+              <p className="text-sm font-bold text-sky-600">{number}</p>
+              <h3 className="mt-5 text-xl font-semibold tracking-[-0.03em] text-slate-950">{title}</h3>
+              <p className="mt-3 leading-7 text-slate-600">{copy}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+        <div className="overflow-hidden rounded-[2rem] bg-slate-200 shadow-2xl shadow-slate-950/10">
+          <Image
+            src="/photos/about.jpg"
+            alt="Anthony Uchenna Eneh sitting outdoors on a bench"
+            width={3048}
+            height={4064}
+            sizes="(max-width: 1024px) 100vw, 40vw"
+            className="aspect-[4/5] w-full object-cover"
+          />
+        </div>
+        <div>
+          <SectionHeader
+            eyebrow="About"
+            title="Builder instinct with academic discipline."
+            copy="Tony works where polished product experiences meet serious system requirements. His work spans fintech dashboards, mobile operations tools, AI prototypes, blockchain-backed trust systems, and doctoral research at Kumoh National Institute of Technology."
+          />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            <article className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm shadow-slate-950/5">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-slate-400">Research</p>
+              <p className="mt-4 text-lg font-semibold leading-7 tracking-[-0.02em] text-slate-950">
+                Trustworthy, verifiable, high-stakes decision systems.
+              </p>
+            </article>
+            <article className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm shadow-slate-950/5">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-slate-400">Delivery</p>
+              <p className="mt-4 text-lg font-semibold leading-7 tracking-[-0.02em] text-slate-950">
+                Frontend-led engineering with full-stack execution.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" className="bg-slate-950 py-24 text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <SectionIntro
-              label="Research & speaking"
-              title="Peer-reviewed publications, ongoing prototypes, and conference presence"
-              copy="Tony’s academic profile is grounded in published work, active prototyping, and presentations that connect theory with implementation."
-            />
-            <div className="mt-10 space-y-4">
-              {publications.map((item) => (
-                <a
-                  key={item.title}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:border-amber-300/30 hover:bg-white/[0.07]"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">{item.venue}</p>
-                  <h3 className="mt-3 font-serif text-2xl text-white">{item.title}</h3>
-                  <p className="mt-3 text-base leading-7 text-[#d8ccb7]">{item.note}</p>
-                </a>
-              ))}
-            </div>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-300">Experience</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              Production roles across fintech, insurance, platforms, and founder-led delivery.
+            </h2>
           </div>
-          <div className="grid gap-6">
-            <figure className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-              <Image
-                src="/photos/speaking-ictc.jpg"
-                alt="Anthony Uchenna Eneh speaking at IEEE ICTC conference"
-                width={4608}
-                height={3456}
-                sizes="(max-width: 1024px) 100vw, 35vw"
-                className="h-[320px] w-full object-cover"
-              />
-              <figcaption className="p-5 text-sm leading-7 text-[#d8ccb7]">
-                Presenting research at IEEE ICTC — translating technical ideas into clear, defensible stories.
-              </figcaption>
-            </figure>
-            <figure className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-              <Image
-                src="/photos/speaking-kics.jpg"
-                alt="Anthony Uchenna Eneh speaking at KICS Winter 2026"
-                width={4032}
-                height={3024}
-                sizes="(max-width: 1024px) 100vw, 35vw"
-                className="h-[320px] w-full object-cover"
-              />
-              <figcaption className="p-5 text-sm leading-7 text-[#d8ccb7]">
-                Speaking at KICS Winter 2026 — part academic rigor, part builder instinct, always implementation-minded.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-[#0d1625]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
-              <Image
-                src="/photos/working.jpg"
-                alt="Anthony Uchenna Eneh working at a desk with dual monitors"
-                width={3264}
-                height={2448}
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div>
-              <SectionIntro
-                label="Skills / tech"
-                title="A stack that spans interface craft, system design, and research prototypes"
-                copy="Tony’s toolkit reflects where he works best: modern frontend systems, pragmatic backend services, fast prototyping, and infrastructure that can survive real usage."
-              />
-              <div className="mt-10 flex flex-wrap gap-3">
-                {stack.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-sm font-medium text-[#fff0cf]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <div className="space-y-6">
-            <SectionIntro
-              label="Contact"
-              title="Open to serious collaborations, thoughtful products, and ambitious technical work"
-              copy="If you’re building something difficult — especially where product craft and technical depth both matter — Tony is worth talking to."
-            />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
-              <Image
-                src="/photos/outdoor-autumn.jpg"
-                alt="Anthony Uchenna Eneh outdoors in autumn leaves"
-                width={4000}
-                height={2252}
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {contactLinks.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.href.startsWith("mailto:") ? undefined : "_blank"}
-                rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:border-amber-300/30 hover:bg-white/[0.07]"
+          <div className="space-y-4">
+            {experience.map((item) => (
+              <article
+                key={`${item.company}-${item.role}`}
+                className="group rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-white/[0.07]"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">{item.label}</p>
-                <p className="mt-4 font-serif text-2xl text-white">{item.value}</p>
-              </a>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold tracking-[-0.03em]">{item.role}</h3>
+                    <p className="mt-1 font-medium text-sky-200">{item.company}</p>
+                  </div>
+                  <p className="rounded-full border border-white/10 px-3 py-1 text-sm text-slate-300">{item.period}</p>
+                </div>
+                <p className="mt-5 max-w-3xl leading-8 text-slate-300">{item.summary}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#08111f]">
-        <div className="mx-auto max-w-7xl px-4 py-8 text-center text-sm text-[#d8ccb7] sm:px-6 lg:px-8">
-          Built by{" "}
-          <a
-            href="https://www.joypinness.com"
-            target="_blank"
-            rel="noreferrer"
-            className="font-semibold text-amber-300 transition hover:text-amber-200"
-          >
-            Joypinness Technologies
-          </a>
+      <section id="projects" className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+        <SectionHeader
+          eyebrow="Selected projects"
+          title="A portfolio of practical products, prototypes, and commercial experiments."
+          copy="The work is deliberately varied: operational dashboards, fintech flows, sports intelligence, outreach assets, and research-adjacent systems."
+        />
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <article
+              key={project.name}
+              className={`flex min-h-[24rem] flex-col rounded-[2rem] p-7 shadow-xl shadow-slate-950/5 ${
+                index === 0
+                  ? "bg-sky-600 text-white lg:col-span-2"
+                  : "border border-slate-200 bg-white text-slate-950"
+              }`}
+            >
+              <p className={`text-sm font-bold uppercase tracking-[0.24em] ${index === 0 ? "text-sky-100" : "text-slate-400"}`}>
+                {project.name}
+              </p>
+              <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.04em]">{project.description}</h3>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {project.stack.map((item) => (
+                  <Badge key={item}>{item}</Badge>
+                ))}
+              </div>
+              <div className="mt-auto pt-10">
+                {project.links.length > 0 ? (
+                  <div className="flex flex-wrap gap-3">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold transition hover:-translate-y-0.5 ${
+                          index === 0 ? "bg-white text-slate-950" : "bg-slate-950 text-white"
+                        }`}
+                      >
+                        {link.label} <ArrowUpRight />
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <p className={index === 0 ? "text-sky-100" : "text-slate-500"}>Available on request</p>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
+      </section>
+
+      <section id="research" className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1fr_0.86fr] lg:items-start">
+        <div>
+          <SectionHeader
+            eyebrow="Research & speaking"
+            title="Research that connects technical rigor with systems people can use."
+            copy="Peer-reviewed work, conference presentations, and prototypes focused on trustworthy AI, digital twins, consent, claims, and blockchain-backed governance."
+          />
+          <div className="mt-10 divide-y divide-slate-200 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-950/5">
+            {publications.map((item) => (
+              <a
+                key={item.title}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex gap-5 p-6 transition hover:bg-slate-50"
+              >
+                <div className="mt-1 h-3 w-3 shrink-0 rounded-full bg-sky-500" />
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-slate-400">{item.venue}</p>
+                  <h3 className="mt-2 text-xl font-semibold leading-7 tracking-[-0.02em] text-slate-950 group-hover:text-sky-700">
+                    {item.title}
+                  </h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="grid gap-5">
+          <figure className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-2xl shadow-slate-950/10">
+            <Image
+              src="/photos/speaking-ictc.jpg"
+              alt="Anthony Uchenna Eneh speaking at IEEE ICTC conference"
+              width={4608}
+              height={3456}
+              sizes="(max-width: 1024px) 100vw, 38vw"
+              className="h-80 w-full rounded-[1.35rem] object-cover"
+            />
+            <figcaption className="px-2 pb-2 pt-5 text-sm leading-7 text-slate-600">
+              Presenting research at IEEE ICTC with a clear, defensible technical narrative.
+            </figcaption>
+          </figure>
+          <figure className="overflow-hidden rounded-[2rem] bg-slate-950 p-3 text-white shadow-2xl shadow-slate-950/15">
+            <Image
+              src="/photos/speaking-kics.jpg"
+              alt="Anthony Uchenna Eneh speaking at KICS Winter 2026"
+              width={4032}
+              height={3024}
+              sizes="(max-width: 1024px) 100vw, 38vw"
+              className="h-80 w-full rounded-[1.35rem] object-cover"
+            />
+            <figcaption className="px-2 pb-2 pt-5 text-sm leading-7 text-slate-300">
+              Conference presence that bridges academic rigor and implementation-minded product work.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section className="bg-white py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="overflow-hidden rounded-[2rem] bg-slate-200">
+            <Image
+              src="/photos/working.jpg"
+              alt="Anthony Uchenna Eneh working at a desk with dual monitors"
+              width={3264}
+              height={2448}
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </div>
+          <div>
+            <SectionHeader
+              eyebrow="Technical range"
+              title="Modern frontend polish with enough backend depth to own the system."
+              copy="Tony’s stack supports rapid product delivery, reliable operations, and credible prototypes across web, mobile, AI, blockchain, and data-heavy domains."
+            />
+            <div className="mt-10 flex flex-wrap gap-3">
+              {stack.map((item) => (
+                <Badge key={item}>{item}</Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+        <div className="overflow-hidden rounded-[2.5rem] bg-slate-950 text-white shadow-2xl shadow-slate-950/20 lg:grid lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="p-8 sm:p-12 lg:p-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-300">Contact</p>
+            <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              Open to serious collaborations, ambitious products, and technical work with real stakes.
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              If you are building something difficult and need product craft plus engineering depth, Tony is worth talking to.
+            </p>
+            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+              {contactLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                  className="rounded-3xl border border-white/10 bg-white/[0.06] p-5 transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-white/[0.1]"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">{item.label}</p>
+                  <p className="mt-3 font-semibold text-white">{item.value}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="relative min-h-[28rem]">
+            <Image
+              src="/photos/outdoor-autumn.jpg"
+              alt="Anthony Uchenna Eneh outdoors in autumn leaves"
+              fill
+              sizes="(max-width: 1024px) 100vw, 48vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer className="px-5 py-10 text-center text-sm text-slate-500 sm:px-8">
+        Built by{" "}
+        <a
+          href="https://www.joypinness.com"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-slate-950 transition hover:text-sky-700"
+        >
+          Joypinness Technologies
+        </a>
       </footer>
     </main>
   );
